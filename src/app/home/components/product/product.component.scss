@@ -1,0 +1,19 @@
+@import "../../../../assets/colors";
+
+.product {
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__empty {
+        text-align: center;
+        color: $pinkish-grey;
+        width: max-content;
+        margin: auto;
+        ion-icon {
+            font-size: 34px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import "../../../../assets/colors";
+
+.card {
+    color: $white;
+    border-radius: 10px;
+    padding: 8px 20px;
+    min-width: 170px;
+    height: 190px;
+    cursor: pointer;
+
+    &.master-card {
+        background-color: $dark-tan;
+    }
+    
+    &.visa-card {
+        background-color: $leafy-green;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

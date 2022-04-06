@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/colors";
+
+@font-face {
+    font-family: Trebuchet;
+    src: url(./assets/fonts/TrebuchetMS.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet';
+    background-color: $background;
+}
+
+body, html {
+    height: 100%;
+}
+
+.text-error {
+    color: $lipstick;
+    margin: 0px 0px 14px;
+    padding-left: 16px;
+}
+
+.text-success {
+    color: $leafy-green;
+    margin: 0px 0px 14px;
+    padding-left: 16px;
+}

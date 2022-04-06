@@ -1,0 +1,13 @@
+@import '../../../../assets/colors';
+
+header {
+    text-align: center;
+    border-bottom: 4px solid $leafy-green;
+    background-color: $white;
+    grid-area: header;
+
+    h1 {
+        margin: 0;
+        padding: 14px 0;
+    }
+}

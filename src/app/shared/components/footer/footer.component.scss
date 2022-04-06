@@ -1,0 +1,27 @@
+@import '../../../../assets/colors';
+
+footer {
+    grid-area: footer;
+    padding: 20px 40px;
+    border-radius: 40px 40px 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $white;    
+    
+    a {
+        ion-icon {
+            color: $brownish-grey;
+            font-size: 30px;
+            cursor: pointer;
+            
+        }
+    }
+
+    .active {
+        ion-icon {
+            color: $leafy-green;
+        }
+    }
+}

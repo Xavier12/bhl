@@ -1,0 +1,15 @@
+<div class="transactions" >
+    <div class="transactions__info">
+        <div class="transactions__icon" [ngClass]="amount > 0 ? 'up' : 'down'">
+            <ion-icon name="{{amount > 0 ? 'arrow-up-outline' : 'arrow-down-outline'}}">
+            </ion-icon>
+        </div>
+        <div class="transactions__detail">
+            <p>{{description}}</p>
+            <p>{{date | date: 'MMMM d'}}</p>
+        </div>
+    </div>
+    <div>
+        <p [ngClass]="amount > 0 ? 'text-success' : 'text-danger'">RD$ {{amount}}</p>
+    </div>
+</div>

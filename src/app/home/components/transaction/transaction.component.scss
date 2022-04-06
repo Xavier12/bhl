@@ -1,0 +1,17 @@
+@import "../../../../assets/colors";
+
+.transaction {
+    text-align: center;
+    color: $pinkish-grey;
+    width: max-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+    ion-icon {
+        font-size: 34px;
+    }
+}

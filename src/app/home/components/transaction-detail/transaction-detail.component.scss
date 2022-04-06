@@ -1,0 +1,51 @@
+@import "../../../../assets/colors";
+
+.transactions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    font-weight: bold;
+    margin-bottom: 16px;
+    
+    p {
+        margin: 0;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon {
+        border-radius: 8px;
+        height: 50px;
+        width: 50px;
+        margin-right: 10px;
+        display: flex;
+        font-size: 30px;
+        justify-content: center;
+        align-items: center;
+
+        &.up {
+            background-color: $leafy5;
+            color: $leafy-green;
+        }
+
+        &.down {
+            background-color: $lipstick5;
+            color: $lipstick;
+        }
+    }
+
+
+    &__detail p:first-of-type{
+        color: $brownish-grey;
+    }
+
+    &__detail p:last-of-type{
+        color: $pinkish-grey;
+        font-weight: normal;
+    }
+
+}

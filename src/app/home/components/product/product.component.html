@@ -1,0 +1,21 @@
+<div class="product">
+    <h4>Mis tarjetas</h4>
+    <br>
+    <div class="product__cards">
+        <app-card *ngFor="let card of listCard" (click)="showDetail(card.productNumber)"
+            [productBrand]="card.productBrand" [BalanceRD]="card.BalanceRD!" [BalanceUS]="card.BalanceUS!">
+        </app-card>
+    </div>
+    <h4>Transacciones</h4>
+    <br>
+    <ng-template #showList>
+        <app-transaction-detail #showList *ngFor="let transaction of listTransactions" [description]="transaction.description"
+            [date]="transaction.date" [amount]="transaction.amount">
+        </app-transaction-detail>
+    </ng-template>
+    <div *ngIf="!listTransactions.length; else showList" class="product__empty">
+        <ion-icon name="warning-outline"></ion-icon>
+        <h4>No hay registros</h4>
+        <br>
+    </div>
+</div>

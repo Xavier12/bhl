@@ -1,0 +1,159 @@
+@import "../../../../assets/colors";
+
+.login {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &::before{
+        background: url("../../../../assets/img/bkg.png") center / cover;
+        content: '';
+        position: absolute;
+        left: 0; right: 0; top: 0; bottom: 0;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    &__menu {
+        color: $leafy-green;
+        font-size: 32px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        cursor: pointer;
+    }
+
+    &__logo {
+        margin-bottom: 28px;
+    }
+
+    &__container {
+        width: 22%;
+    
+        &::before {
+            content: "";
+            opacity: 0.75;
+            background-color: rgba(0,0,0,0.75);
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+    
+            input[type=text], input[type=password] {
+                background-color: $white;
+                border: 1px solid $pinkish-grey;
+                color: $pinkish-grey;
+                margin-bottom: 14px;
+                border-radius: 10px;
+                padding: 16px 20px;
+
+                &::placeholder {
+                    color: $pinkish-grey;
+                }
+
+                &.ng-invalid.ng-touched {
+                    border: 1px solid $lipstick;
+    
+                    &::placeholder {
+                        color: $lipstick;
+                    }
+                }
+            }
+    
+            input[type=submit] {
+                border-radius: 10px;
+                background-color: $leafy-green;
+                border: 1px solid $leafy-green;
+                padding: 10px;
+                color: $white;
+                padding: 16px 20px;
+                font-size: 18px;
+                cursor: pointer;
+            }
+    
+        }
+    }
+    
+    &__switch {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 14px;
+
+        span {
+            margin-left: 5px;
+        }
+    }
+}
+
+.sidebar {
+    &__header {
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid $pinkish-grey;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 30px;
+    }
+
+    &__item {
+        font-size: 24px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: normal;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 40px;
+
+        ion-icon {
+            color: $leafy-green;
+            margin-right: 15px;
+        }
+    }
+}
+
+.splash {
+    background: $leafy-green;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    &__logo {
+        background: url("../../../../assets/img/logo_white.svg");
+        background-repeat: no-repeat;
+        max-width: 100%;
+        background-position: center;
+        background-size: contain;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+  

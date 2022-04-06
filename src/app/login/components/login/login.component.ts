@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) {
     this.loginForm = this.fb.group({
-      cardId: ['bhdleon', Validators.required],
+      cardId: ['', Validators.required],
       password: ['', Validators.required]
     });
   }

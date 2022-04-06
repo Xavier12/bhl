@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Cards, Movements, Payment } from '../../model/cards';
+import { Cards } from '../../model/cards';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { Movements } from 'src/app/model/movements';
+import { Payment } from 'src/app/model/payment';
 
 @Injectable({
   providedIn: 'root'

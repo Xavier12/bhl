@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { Cards, Movements } from 'src/app/model/cards';
+import { Cards } from 'src/app/model/cards';
+import { Movements } from 'src/app/model/movements';
 
 
 @Component({

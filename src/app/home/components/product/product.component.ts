@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { switchMap } from 'rxjs/operators';
 import { AuthenticationService } from 'src/app/core/services/authentication.service';
-import { Cards, Movements } from '../../../model/cards';
+import { Movements } from 'src/app/model/movements';
+import { Cards } from '../../../model/cards';
 
 @Component({
   selector: 'app-product',
@@ -17,10 +19,15 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.getCards()
-    .subscribe((cards) => {
-      this.listCard = cards;
-      // this.showDetail(this.listCard[0].productNumber);
-    });
+    .pipe(
+      switchMap(cards => {
+        this.listCard = cards;
+        return this.authService.getCardsMovements(cards[0].productNumber)
+      })
+    )
+    .subscribe(movements => {
+      this.listTransactions = movements;
+    })
   }
 
   showDetail(productNumber: string): void {

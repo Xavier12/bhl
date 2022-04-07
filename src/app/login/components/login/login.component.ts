@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.loginForm.value.cardId, this.loginForm.value.password)
       .then((response) => {
         localStorage.setItem('auth_token', response.token);
-        this.router.navigateByUrl('/home/product');
+        this.router.navigateByUrl('home');
       });
     }
     this.loginForm.markAllAsTouched();

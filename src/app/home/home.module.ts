@@ -5,10 +5,10 @@ import { ProductComponent } from './components/product/product.component';
 import { CardComponent } from './components/card/card.component';
 import { ConfigurationComponent } from './components/configuration/configuration.component';
 import { IonicModule } from '@ionic/angular';
-import { AppRoutingModule } from '../app-routing.module';
 import { TransactionDetailComponent } from './components/transaction-detail/transaction-detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from '../shared/shared.module';
+import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
-    AppRoutingModule,
+    HomeRoutingModule,
     IonicModule.forRoot()
   ]
 })

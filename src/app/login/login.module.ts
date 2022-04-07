@@ -6,6 +6,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { LoginRoutingModule } from './login-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { LoginComponent } from './components/login/login.component';
     InputSwitchModule,
     SidebarModule,
     ReactiveFormsModule,
+    LoginRoutingModule,
     IonicModule.forRoot()
   ]
 })
